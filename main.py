@@ -19,6 +19,7 @@ def collect_data(city_code='2209'):
 
     response = requests.get(url='https://magnit.ru/promo/', headers=headers, cookies=cookies)
 
+#Сохраняем результат
     with open(f'file.html', 'w', encoding="UTF-8") as file:
         file.write(response.text)
 
