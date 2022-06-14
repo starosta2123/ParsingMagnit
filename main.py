@@ -18,7 +18,7 @@ def collect_data(city_code='2209'):
         'mg_geo_id': f'{city_code}'
     }
 
-#Отправляем запрос на сайт
+#Отправляем запрос на сайт!
 
     response = requests.get(url='https://magnit.ru/promo/', headers=headers, cookies=cookies)
 
