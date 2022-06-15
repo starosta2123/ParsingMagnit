@@ -23,20 +23,23 @@ def collect_data(city_code='2209'):
 
 #Sending a request to the site
 
-    response = requests.get(url='https://magnit.ru/promo/', headers=headers, cookies=cookies)
+ #   response = requests.get(url='https://magnit.ru/promo/', headers=headers, cookies=cookies)
 
 #Save the result
-    with open(f'index.html', 'w', encoding="UTF-8") as file:
-        file.write(response.text)
+ #   with open(f'index.html', 'w', encoding="UTF-8") as file:
+ #       file.write(response.text)
 
-    #with open('file.html') as file:
-       # src = file.read()
+    with open('index.html', encoding="UTF-8") as file:
+        src = file.read()
 
-  #  soup = BeautifulSoup (src, 'lxml')
+    soup = BeautifulSoup(src, 'lxml')
 
-  #  city = soup.find('a', class_ = 'header__contacts-link_city').text.strip()
-   # print(city)
+    city = soup.find('a', class_ = 'header__contacts-link_city').text.strip()
+    cards = soup.find_all('a', class_='card-sale_catalogue')
+    #print(city, len(cards))
 
+    for card in cards
+        card_title = 
 
 
 
